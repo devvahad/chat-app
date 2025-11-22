@@ -23,6 +23,10 @@ app.get('/',(request,response)=>{
     })
 })
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 //api endpoints
 app.use('/api',router)
 
